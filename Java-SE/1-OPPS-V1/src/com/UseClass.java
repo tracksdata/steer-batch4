@@ -3,10 +3,7 @@ class Rbi{
 	
 	public void commonInfo() {
 		System.out.println(">>> RBI common guidelines");
-	}
-	
-	
-	
+	}	
 }
 
 class Sbi extends Rbi{
