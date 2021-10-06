@@ -8,7 +8,7 @@ public class PriceMatrixImpl {
 
 
 	public PriceMatrixImpl() {
-		System.out.println(">>> PriceMatrixImpl:: object created..");
+		//System.out.println(">>> PriceMatrixImpl:: object created..");
 	}
 
 	public double getItemPrice(String itemCode) {

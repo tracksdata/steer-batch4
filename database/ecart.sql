@@ -32,7 +32,7 @@ CREATE TABLE `brands` (
 
 
 
-INSERT INTO `` (`brand_id`, `brand_title`) VALUES
+INSERT INTO BRANDS(`brand_id`, `brand_title`) VALUES
 (1, 'HP'),
 (2, 'Samsung'),
 (3, 'Apple'),
@@ -72,7 +72,7 @@ CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `qty` int(11) NOT NULL,
+  `total` int(11) NOT NULL,
   `trx_id` varchar(255) NOT NULL,
   `p_status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
