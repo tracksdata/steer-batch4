@@ -13,6 +13,6 @@ public interface EmployeeService {
 	void deleteEmployee(int empId);
 
 	Employee getEmployeeById(int employeeId);
-	public Employee getEmployeeByName(String empname);
+	public void getEmployeeByName(String empname);
 
 }

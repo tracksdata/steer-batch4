@@ -25,7 +25,7 @@ public class AppConfig {
 	private Environment env;
 	
 
-	@Bean
+	//@Bean
 	public void f1() {
 		System.out.println(">>>> name is " + employeeName);
 		System.out.println(">>> name - v1::: "+env.getProperty("name"));

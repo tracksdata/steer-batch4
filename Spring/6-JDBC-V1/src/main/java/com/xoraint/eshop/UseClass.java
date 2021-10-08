@@ -17,9 +17,9 @@ public class UseClass {
 
 		ProductDaoImpl prodDao = ac.getBean(ProductDaoImpl.class);
 
-		prodDao.findAll().forEach(prod->{
-			System.out.println(prod);
-		});
+		//prodDao.findAll().forEach(prod->{
+		//	System.out.println(prod);
+		//});
 
 		// using rowMapper interface
 		// prodDao.getAllProducts().forEach(product->{
@@ -29,7 +29,7 @@ public class UseClass {
 		// using resultsetextractor
 
 		// prodDao.getAllProductsV1().forEach(System.out::println);
-		// prodDao.findAllProductsV2().forEach(System.out::println);
+		prodDao.findAllProductsV2().forEach(System.out::println);
 		// Product prod = prodDao.findProductById(28);
 
 		// prodDao.findProductByName("%a%").forEach(System.out::println);

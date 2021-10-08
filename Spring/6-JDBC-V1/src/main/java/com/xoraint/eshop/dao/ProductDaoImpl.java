@@ -13,7 +13,8 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Repository;import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.xoraint.eshop.model.Product;
 
@@ -34,7 +35,8 @@ public class ProductDaoImpl {
 	}
 
 	/*
-	 * using Domain Objects ========================== 
+	 * using Domain Objects
+	 *  ========================== 
 	 * 1. RowMapper 
 	 * 	-> T mapRow(ResultSet rs, int rowNum) 
 	 * 2. RowCallbackHandler 
@@ -81,6 +83,7 @@ public class ProductDaoImpl {
 	}
 
 	// using lamda expression
+	@Transactional(isolation = Isolation.READ_COMMITTED)
 	public List<Product> findAllProductsV2() {
 		return jdbcTemplate.query("select * from products", (ResultSet rs) -> {
 			List<Product> prods = new ArrayList<>();

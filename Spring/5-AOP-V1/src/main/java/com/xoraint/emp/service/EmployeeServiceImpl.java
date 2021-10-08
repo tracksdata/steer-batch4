@@ -31,12 +31,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 	
 	
-	public Employee getEmployeeByName(String empname) {
+	public void getEmployeeByName(String empname) {
 		//System.out.println(emps);
 		System.out.println(">>>> Method getEmployeeById() called");
 		Employee e1=emps.stream().filter(emp->emp.getEmpName().equals(empname)).findAny().orElse(null);
 		//System.out.println(e1);
-		return e1;
+		//return e1;
 
 	}
 
@@ -48,7 +48,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public Employee getEmployeeById(int employeeId) {
 		//System.out.println(emps);
-		System.out.println(">>>> Method getEmployeeById() called");
+		System.out.println(">>> <<<<<< Method getEmployeeById() called");
 		Employee e1=emps.stream().filter(emp->emp.getEmpId()==employeeId).findAny().orElse(null);
 		//System.out.println(e1);
 		return e1;

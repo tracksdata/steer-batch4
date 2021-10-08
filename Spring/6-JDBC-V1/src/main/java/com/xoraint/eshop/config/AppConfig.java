@@ -12,10 +12,12 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScans({ @ComponentScan("com.xoraint.eshop.service"), @ComponentScan("com.xoraint.eshop.dao") })
 @PropertySource(value = { "application.properties" })
+@EnableTransactionManagement
 public class AppConfig {
 	@Autowired
 	private Environment env;

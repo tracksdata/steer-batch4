@@ -18,12 +18,14 @@ public class Test {
 		//es.welcome();
 		//es.findAll();
 		//es.deleteEmployee(100);
+		
 		Employee emp = es.getEmployeeById(12);
-		Employee emp1 = es.getEmployeeByName("Bucky");
+		
+		//Employee emp1 = es.getEmployeeByName("Bucky");
 
 		
 		System.out.println("MAIN:: "+emp);
-		System.out.println("MAIN - V1 :: "+emp1);
+	//	System.out.println("MAIN - V1 :: "+emp1);
 
 
 		ac.close();

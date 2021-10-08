@@ -19,7 +19,7 @@ public class UseClass {
 		ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 		
 		ProductService productService = ac.getBean(ProductServiceImpl.class);
-		productService.findAllProductsV3().forEach(System.out::println);
+		productService.findAllProductsV2().forEach(System.out::println);
 
 
 //		Category c1 = new Category(12);
