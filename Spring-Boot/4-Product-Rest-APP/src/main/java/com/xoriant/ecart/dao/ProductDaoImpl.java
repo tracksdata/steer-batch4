@@ -19,6 +19,20 @@ public class ProductDaoImpl implements ProductDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
+	// save new Product
+	public Product save(Product product) {
+
+		int res = jdbcTemplate.update(DBQueries.SAVE_NEW_PRODUCT, product.getProductId(),
+				product.getCategory().getCategoryId(), product.getBrand().getBrandId(), product.getProductName(),
+				product.getPrice(), product.getQuantity(), product.getDescription(), product.getImagePath(),
+				product.getKeywords());
+
+		if (res == 0)
+			return null;
+
+		return product;
+	}
+
 	// fetch all products
 	@Override
 	public List<Product> findAll() {
@@ -239,7 +253,7 @@ public class ProductDaoImpl implements ProductDao {
 		return jdbcTemplate.query(DBQueries.FILTER_BRANDNAME_BY_CATEGORYNAME, (ResultSet rs) -> {
 			List<String> brandNames = new ArrayList<>();
 			while (rs.next()) {
-				
+
 				brandNames.add(rs.getString(1));
 			}
 			return brandNames;
