@@ -18,7 +18,7 @@ import com.xoriant.ecart.model.Product;
 import com.xoriant.ecart.service.ProductService;
 
 @RestController
-@RequestMapping("/api/search")
+@RequestMapping("/api/products")
 @CrossOrigin()
 public class ProductRestController {
 
@@ -62,7 +62,7 @@ public class ProductRestController {
 	}
 
 	// find all products by brand name
-	@GetMapping("/filter/brand/{brandName}")
+	@GetMapping("/filter/brands/{brandName}")
 	public List<Product> findProductsByBrandName(@PathVariable String brandName) {
 		return productService.findAllProductsByBrandName(brandName);
 	}
@@ -73,8 +73,8 @@ public class ProductRestController {
 		return productService.filterBrandsByCategoryName(categoryName);
 	}
 
-	// find all brand names by categorry name
-	@GetMapping("/filter/category-name/{categoryName}")
+	// find all brand names by category name
+	@GetMapping("/filter/brands/category/{categoryName}")
 	public List<String> findAllBrandNamesByCategoryName(@PathVariable String categoryName) {
 		return productService.filterBrandNameByCategoryName(categoryName);
 	}

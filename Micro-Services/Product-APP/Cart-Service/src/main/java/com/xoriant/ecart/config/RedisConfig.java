@@ -20,6 +20,7 @@ public class RedisConfig {
 
 	@Bean
 	public RedisTemplate<String, ItemLine> redisTemplate() {
+		
 		final RedisTemplate<String, ItemLine> template = new RedisTemplate<String, ItemLine>();
 		template.setDefaultSerializer(new GenericJackson2JsonRedisSerializer());
 		template.setKeySerializer(new StringRedisSerializer());

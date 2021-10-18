@@ -1,10 +1,10 @@
 package com.xoriant.ecart.model;
 
-public class ItemLine {
+
+public class ItemLine{
 
 	private Item item;
 	private int qty;
-	private double totalPrice;
 
 	public ItemLine() {
 		// TODO Auto-generated constructor stub
@@ -32,17 +32,11 @@ public class ItemLine {
 		this.qty = qty;
 	}
 
-	public double getTotalPrice() {
-		return totalPrice;
-	}
-
-	public void setTotalPrice(double totalPrice) {
-		this.totalPrice = totalPrice;
-	}
-
 	@Override
 	public String toString() {
 		return "ItemLine [item=" + item + ", qty=" + qty + "]";
 	}
+	
+	
 
 }

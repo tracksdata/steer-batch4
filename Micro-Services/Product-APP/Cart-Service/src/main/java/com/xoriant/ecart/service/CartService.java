@@ -7,7 +7,7 @@ import com.xoriant.ecart.model.ItemLine;
 public interface CartService {
 
 	// save cart Item to the cart
-	ItemLine save(String user, ItemLine itemLine);
+	ItemLine save(String user, int qty, int productId);
 
 	// load all cart items
 	List<ItemLine> findAll(String user);
