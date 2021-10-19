@@ -1,5 +1,7 @@
 package com.xoriant.ecart.model;
 
+import java.time.LocalDateTime;
+
 public class Order {
 
 	private int orderId;
@@ -9,12 +11,14 @@ public class Order {
 	private String transactionId;
 	private String paymentStatus;
 	private int quantity;
+	private LocalDateTime orderDate;
+	
 
 	public Order() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Order(int orderId, int userId,int productId,int quantity, double total, String transactionId, String paymentStatus) {
+	public Order(int orderId, int userId,int productId,int quantity, double total, String transactionId, String paymentStatus,LocalDateTime orderDate) {
 		this.orderId = orderId;
 		this.productId = productId;
 		this.userId = userId;
@@ -22,6 +26,17 @@ public class Order {
 		this.total = total;
 		this.transactionId = transactionId;
 		this.paymentStatus = paymentStatus;
+		this.orderDate=orderDate;
+	}
+	
+	
+
+	public LocalDateTime getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(LocalDateTime orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public int getQuantity() {

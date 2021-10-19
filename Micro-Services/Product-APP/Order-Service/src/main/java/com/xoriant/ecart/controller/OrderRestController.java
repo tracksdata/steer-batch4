@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.xoriant.ecart.dao.OrderDaoImpl;
-import com.xoriant.ecart.model.ItemLine;
+import com.xoriant.ecart.model.Order;
+import com.xoriant.ecart.service.OrderService;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -16,11 +16,11 @@ import com.xoriant.ecart.model.ItemLine;
 public class OrderRestController {
 	
 	@Autowired
-	private OrderDaoImpl orderDao;
+	private OrderService orderService;
 	
 	@GetMapping("/{user}")
-	public ItemLine[] placeOrder(@PathVariable String user) {
-		return orderDao.placeOrder(user);
+	public Order placeOrder(@PathVariable String user) {
+		return orderService.placeOrder(user);
 	}
 	
 	

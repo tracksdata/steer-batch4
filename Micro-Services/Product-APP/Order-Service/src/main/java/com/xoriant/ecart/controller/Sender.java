@@ -20,12 +20,11 @@ public class Sender {
 		return new Queue("EmailQ", false);
 	}
 	
-	
-	public void sendOrderInfo(Map<String, Object> orderInfo) {
-		
-		//rabbitTemplate.convertAndSend("EmailQ",orderInfo);
-		rabbitTemplate.convertAndSend("InventoryQ",orderInfo);
-		
+
+	public void sendOrderDetails(Map<String, Object> orderInfo) {
+		// TODO Auto-generated method stub
+		rabbitTemplate.convertAndSend("EmailQ",orderInfo);
+
 		
 	}
 
